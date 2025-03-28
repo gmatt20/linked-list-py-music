@@ -1,5 +1,5 @@
-import MusicNode
+from MusicNode import MusicNode
 
-musicNode = MusicNode.MusicNode("Paranoid", "Black Sabbath", "Paranoid")
+musicNode = MusicNode("Paranoid", "Black Sabbath", "Paranoid")
 
 musicNode.Print()
