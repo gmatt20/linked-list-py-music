@@ -5,9 +5,17 @@ class MusicList:
     self.head = None
     self.tail = None
   def pushFront(self, songName, artistName, albumName):
+    newNode = MusicNode(songName, artistName, albumName)
     if self.head == None:
-      newNode = MusicNode(songName, artistName, albumName)
       self.head = newNode
-      newNode.Print()
+      self.tail = newNode
     else:
-      
+      newNode.next = self.head
+      self.head = newNode
+
+  def PrintList(self):
+      currNode = self.head
+      while currNode != None:
+        print(currNode.songName + " " + currNode.artistName + " " + currNode.albumName + " -> ")
+        currNode = currNode.next
+
